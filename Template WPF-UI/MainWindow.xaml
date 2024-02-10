@@ -1,0 +1,33 @@
+﻿<Window x:Class="Template_WPF_UI.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Template_WPF_UI"
+        mc:Ignorable="d"
+        xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
+        Background="{DynamicResource ApplicationBackgroundBrush}"
+        Style="{DynamicResource UiWindow}"
+        WindowStartupLocation="CenterScreen"
+        Title="WPF-UI Template" Height="600" Width="918" MinHeight="600" MinWidth="1050" MaxHeight="600" MaxWidth="1050">
+    <Grid x:Name="Always_Visible" Visibility="Visible">
+        <Grid x:Name="WelcomeGrid" Visibility="Visible">
+            <ui:CardControl Content="" IsEnabled="False" HorizontalAlignment="Center" Height="330" Width="526" Margin="0,158,0,0" VerticalAlignment="Top"/>
+            <Label Content="Welcome to my WPF-UI Template!" FontSize="18" Foreground="White" HorizontalAlignment="Center" Margin="0,174,0,0" VerticalAlignment="Top"/>
+            <ui:Button x:Name="Welcome_Click_Me" Click="Welcome_Click_Me_Click" Content="Click Me!" Margin="0,207,0,0" VerticalAlignment="Top" HorizontalAlignment="Center" Width="447"/>
+            <ui:TextBox x:Name="EmailTxt" PlaceholderText="Please enter email here..." Margin="302,305,302,0" VerticalAlignment="Top"/>
+            <ui:PasswordBox x:Name="PasswordTxt"  PlaceholderText="Please enter password here..." Margin="302,371,302,0" VerticalAlignment="Top"/>
+            <Label Content="Enter something below, The corrent one is example@example.com!" FontSize="16" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,275,0,0"/>
+            <Label Content="Enter something below, The corrent one is examplePass (nothing else)!" FontSize="16" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,343,0,0"/>
+            <ui:Button x:Name="Submit_Welcome" Click="Submit_Welcome_Click" Content="Submit!" Margin="0,426,0,0" VerticalAlignment="Top" HorizontalAlignment="Center" Width="447"/>
+
+        </Grid>
+
+        <ui:Snackbar x:Name="snakeBarNot" Timeout="7000" Margin="24,492,24,0" VerticalAlignment="Top"/>
+        <ui:CardControl VerticalAlignment="Top" IsEnabled="False" Height="48"/>
+        <ui:TitleBar
+    Title="WPF-UI Template"
+    ShowMaximize="False"
+    />
+    </Grid>
+</Window>
